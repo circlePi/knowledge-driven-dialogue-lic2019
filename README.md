@@ -6,7 +6,7 @@ For building a proactive dialogue chatbot, we used a so-called generation-rerank
 ### Data Augmentation
 We used four data augmentation techniques, Entity Generalization,Knowledge Selection,Switch,Conversation Extraction to construct multiple different dataset for training Seq2Seq models. One can use the scripts Seq2Seq/preclean_*.py to with slight modification of parameters to get 6 datasets.
 ### Seq2Seq Model
-For ensemble purpose we choose different encoders and decoders, i.e. LSTM cells and the Transformer. This part is implemented based on the [Open-NMT](https://github.com/OpenNMT/OpenNMT-py) framework. <br>
+For ensemble purpose we choose different encoders and decoders, i.e. LSTM cells and the Transformer. <br>
 #### Training
 - python preprocess.py
 - python train.py
@@ -20,6 +20,6 @@ We used a GBDT regressor for ranking. One may arugue that Why not use a neural n
 python create_gbdt_dataset.py
 #### Feature extraction
 python feature_util_multiprocess.py <br>
-The feature extractions reference the [Kaggle_HomeDepot](https://github.com/ChenglongChen/Kaggle_HomeDepot) by ChenglongChen 
+The feature extractions partly reference the [Kaggle_HomeDepot](https://github.com/ChenglongChen/Kaggle_HomeDepot) by ChenglongChen 
 ### Checkpoints
 It might take some extra time to upload the checkpoints because they are rather large in size.
